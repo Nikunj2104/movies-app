@@ -28,6 +28,7 @@ export default function App() {
     getMovieRequest(searchValue);
   }, [searchValue]);
 
+  /*
   useEffect(() => {
     const savedBookmarks = JSON.parse(
       localStorage.getItem("movie-api-app-bookmark")
@@ -36,7 +37,6 @@ export default function App() {
     setBookmark(savedBookmarks);
   }, []);
 
-  /*
   const saveToLocalStorage = (items) => {
     localStorage.setItem("movie-api-app-bookmark", JSON.stringify(items));
   };
