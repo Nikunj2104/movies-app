@@ -36,14 +36,17 @@ export default function App() {
     setBookmark(savedBookmarks);
   }, []);
 
+  /*
   const saveToLocalStorage = (items) => {
     localStorage.setItem("movie-api-app-bookmark", JSON.stringify(items));
   };
+  saveToLocalStorage(newBookmarkList);
+  saveToLocalStorage(newBookmarkList);
+  */
 
   const addItToBookmark = (item) => {
     const newBookmarkList = [...bookmark, item];
     setBookmark(newBookmarkList);
-    saveToLocalStorage(newBookmarkList);
   };
 
   const removeItFromBookmark = (item) => {
@@ -51,7 +54,6 @@ export default function App() {
       (bookmark) => bookmark.imdbID !== bookmark.imdbID
     );
     setBookmark(newBookmarkList);
-    saveToLocalStorage(newBookmarkList);
   };
 
   return (
@@ -68,7 +70,7 @@ export default function App() {
         />
       </div>
       <div>
-        <BookmarkHeading heading="Bookmarks"/>
+        <BookmarkHeading heading="Bookmarks" />
       </div>
       <div className="forHorizontal forScroll">
         <MovieListForSearch
