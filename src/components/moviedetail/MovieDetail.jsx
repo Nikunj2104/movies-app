@@ -34,7 +34,7 @@ export default function MovieDetail({ match }) {
       <div className="forContainer">
         <div className="lhsPart">
           <img
-            src={`http://image.tmdb.org/t/p/original/${detail.backdrop_path}`}
+            src={`https://image.tmdb.org/t/p/original/${detail.backdrop_path}`}
             alt={detail.title}
             className="forImg"
           />
